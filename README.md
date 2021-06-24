@@ -12,6 +12,8 @@
         style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a>
 
+인터스텔라 펜페이지 컨셉으로 제작했습니다. 많이 부족하지만 열심히 만들어봤습니다.
+***
 
 
 https://user-images.githubusercontent.com/75168305/123248115-87ddda80-d522-11eb-845b-45292c237e96.mp4

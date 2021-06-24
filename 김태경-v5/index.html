@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1,maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/index_Phone.css" media="screen and (max-width : 767px)">
+    <link rel="stylesheet" href="./css/index_Desktop.css" media="screen and (min-width : 768px)">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        // $(function(){
+        //     $("button").on({
+        //         "mouseover focus": overFnc($(this).val)
+        //     });
+        //     if(tt) console.log('tt');
+        //     function overFnc(val){
+        //         $("#noneButton").text($(this).data(val));
+        //     }
+        // });
+    </script>
+</head>
+<body>
+    <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="./video/movie1.mp4" type="video/mp4">
+        <source src="./video/movie1.webm" type="video/webm">
+            Sorry, your browser does not support HTML5 video.
+    </video>
+    <header> 
+        <div id="title">
+            <h1>Interstellar</h1>
+        </div>
+    </header>
+    <nav>
+    </nav>
+    <section>
+        <div id="container">
+            <ol>
+                <li><div id="noneButton">MENU</div></li>
+                <li ><a id="innerButton" href="./story.html"><div id="button">STORY</div></a></li>
+                <li ><a id="innerButton" href="./character.html"><div id="button">CHARACTER</div></a></li>
+                <li ><a id="innerButton" href="./famousline.html"><div id="button">FAMOUS LINE</div></a></li>
+                <li ><a id="innerButton" href="./photo.html"><div id="button">PHOTO</div></a></li>
+            </ol> 
+            <!-- <a id="innerButton" href="./BASIC INFO.html"><div id="button">BASIC INFO</div></a> -->
+        </div>
+    </section>
+    <footer>
+        <div id="bottom">
+            <p>© 20171528 Interstellar fan page</p>
+            <p></p>
+        </div>
+    </footer>
+</body>
+</html>

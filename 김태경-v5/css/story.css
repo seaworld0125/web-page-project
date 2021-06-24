@@ -1,0 +1,77 @@
+body{
+    position: relative;
+    margin: 0;
+    background-color: black;
+    overflow: scroll;
+}
+#title{
+    overflow: hidden;
+    height: 14vh;
+    width: 100%;
+    text-align: center;
+    font-family: "zendots";
+    line-height: 14vh;
+    font-size: 350%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid honeydew; */
+}
+#container{
+    overflow: hidden;
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    /* border: 1px solid honeydew; */
+    color: honeydew
+}
+footer{
+    position: fixed;
+    /* overflow: hidden;
+    height: 10vw;
+    width: 20vw; */
+    left: 4vw;
+    top: 90vh;
+    /* border: 1px solid honeydew; */
+}
+#bottom{
+    position: inherit;
+    color: gray;   
+    font-family: "roboto-light";
+    font-size: 0.8vw;
+}
+#innerButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 10vw;
+    text-align: center;
+    overflow: hidden;
+    height: 7vw;
+    width: 13vw;
+    margin: 3% auto 0 auto;
+    font-family: "zendots";
+    color: honeydew;
+}
+#innerButton:link{
+    text-decoration: none;
+    color: white;
+}
+#innerButton:visited{
+    text-decoration: none;
+    color: white;
+}
+#innerButton:hover{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width : 767px) {
+    #profile{
+        width: 15vw;
+        height: 15vh;
+    }
+    #title{
+        font-size: 200%;
+    }
+}

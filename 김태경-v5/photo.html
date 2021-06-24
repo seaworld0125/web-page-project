@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- <link rel="stylesheet" href="./css/photo.css"> -->
+    <link rel="stylesheet" href="./css/photo2.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function appendPaper(){
+                for(var i = 1; i < 13; i++){
+                    let src = './image/' + i + '.jpg';
+                    let data = 
+                    `<div class="paper">
+                        <div class="paper-holder">
+                            <a><img width="190" src="${src}"></a>
+                        </div>
+                        <p class="paper-description" src="${src}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ullam, neque ratione hic, soluta suscipit impedit doloribus quam</p>
+                    </div>`;
+                    $('#main-section').append(data);
+                }
+            }
+            appendPaper();
+            $('#main-section').imagesLoaded(function(){
+                $('#main-section').masonry({
+                    itemSelector: '.paper',
+                    columnWidth: 230,
+                    isAnimated: true
+                });
+            });
+            function showLightBox(src){
+                $('#darken-background').show();
+                $('#darken-background').css('top', $(window).scrollTop());
+                $('body').css('overflow', 'hidden');
+                $('#paperImg').attr('src', `${src}`);
+            }
+            function hideLighBox(){
+                $('#darken-background').hide();
+                $('body').css('overflow', '');
+            }
+            $('#darken-background').click(function(){
+                hideLighBox();
+            });
+            $('.paper').click(function(event){
+                let src = event.target.outerHTML.split(['"'])[3];
+                // console.log(event.target.outerHTML.split(['"'])[3]);
+                showLightBox(src);
+            });
+            $('#lightbox').click(function (event){
+                event.stopPropagation();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header id="main-header">
+        <h1 class="header-title"">photo</h1>
+    </header>
+    <section id="main-section">
+    </section>
+    <a id="innerButton" href="./index.html">Back</a>
+    <div id="darken-background">
+        <div id="lightbox">
+            <div class="user-information">
+                <a class="user-information-image" href="#">
+                    <img src="http://placehold.it/70x70">
+                </a>
+                <div class="user-information-text">
+                    <h3>User</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <hr class="lightbox-splitter">
+            <img id="paperImg">
+        </div>
+    </div>
+</body>
+</html>

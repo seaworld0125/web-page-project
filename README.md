@@ -12,7 +12,8 @@
         style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a>
 
-인터스텔라 펜페이지 컨셉으로 제작했습니다. 많이 부족하지만 열심히 만들어봤습니다.
+학교 과제
+인터스텔라 펜페이지 컨셉
 ***
 
 
